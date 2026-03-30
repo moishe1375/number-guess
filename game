@@ -1,0 +1,55 @@
+//game
+// Created by: 4A
+// Created on: 2023-11-01
+import java.util.Random;
+import java.util.Scanner;
+public class App {
+    public static void main(String[] args) {
+        // create a random number generator
+        Random rand = new Random();
+
+        // generate a random number between 1 and 100
+        int randomNumber = rand.nextInt(100) + 1;
+
+        // create a scanner to read user input
+        Scanner scanner = new Scanner(System.in);
+
+        // initialize the user's guess
+        int userGuess = 0;
+        int attempts = 0; // initialize attempts to 0
+
+        // loop until the user guesses the correct number
+        while (userGuess != randomNumber) {
+            System.out.print("Enter your guess (1-100): ");
+            userGuess = scanner.nextInt();
+            attempts++; // increment the number of attempts
+            
+
+            if (userGuess < randomNumber) {
+                System.out.println("Too low! Try again.");
+            } else if (userGuess > randomNumber) {
+                System.out.println("Too high! Try again.");
+            } else {
+                System.out.println("Congratulations! You guessed the number!");
+            }
+        }
+      //add a message to reveal the correct number at the end of the game
+        System.out.println("The correct number was: " + randomNumber);
+        //add a message to tell how many attempts the user took to guess the number
+        
+
+        
+        //add a message to indicate the end of the game
+        System.out.println("Thanks for playing!");
+        System.out.println("It took you " + attempts + " attempts to guess the number.");
+        // close the scanner
+        scanner.close();
+    }
+}
+//game
+// Created by: 4A
+// Created on: 2023-11-01
+// This program is a number guessing game where the user tries to guess a randomly generated number between 1 and 100.
+// The program provides feedback on whether the user's guess is too high, too low, or correct.
+// The game continues until the user guesses the correct number, and at the end, it reveals the correct number and the number of attempts taken.
+// The program uses the Random class to generate a random number and the Scanner class to read user input from the console.
