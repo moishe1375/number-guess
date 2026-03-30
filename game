@@ -1,6 +1,6 @@
 //game
-// Created by: 4A
-// Created on: 2023-11-01
+// Created by: Moishe schwartz
+// Created on: 03/30/2026
 import java.util.Random;
 import java.util.Scanner;
 public class App {
